@@ -1,0 +1,11 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,process,sample,ms
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,0,0.458292
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,1,0.459958
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,2,0.452917
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,3,0.458584
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,4,0.494833
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,5,0.449542
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,6,0.456250
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,7,0.452833
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,8,0.448834
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,9,0.449250

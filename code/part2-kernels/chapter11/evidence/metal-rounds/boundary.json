@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "kind": "chapter11-tilelang-boundary",
+  "shapes": [
+    [
+      64,
+      64,
+      64
+    ],
+    [
+      128,
+      128,
+      128
+    ],
+    [
+      256,
+      256,
+      256
+    ],
+    [
+      129,
+      131,
+      127
+    ]
+  ],
+  "seed": 20260920,
+  "correct": "OK",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "cases": [
+    {
+      "m": 64,
+      "n": 64,
+      "k": 64,
+      "tile": 16,
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_error_ratio": 0.0
+    },
+    {
+      "m": 128,
+      "n": 128,
+      "k": 128,
+      "tile": 16,
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_error_ratio": 0.0
+    },
+    {
+      "m": 256,
+      "n": 256,
+      "k": 256,
+      "tile": 16,
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_error_ratio": 0.0
+    },
+    {
+      "m": 129,
+      "n": 131,
+      "k": 127,
+      "tile": 16,
+      "correct": "OK",
+      "max_abs_error": 6.103515625e-05,
+      "max_error_ratio": 0.0019157579843591438
+    },
+    {
+      "m": 64,
+      "n": 64,
+      "k": 64,
+      "tile": 64,
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_error_ratio": 0.0
+    },
+    {
+      "m": 128,
+      "n": 128,
+      "k": 128,
+      "tile": 64,
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_error_ratio": 0.0
+    },
+    {
+      "m": 256,
+      "n": 256,
+      "k": 256,
+      "tile": 64,
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_error_ratio": 0.0
+    },
+    {
+      "m": 129,
+      "n": 131,
+      "k": 127,
+      "tile": 64,
+      "correct": "OK",
+      "max_abs_error": 6.103515625e-05,
+      "max_error_ratio": 0.0019157579843591438
+    }
+  ]
+}

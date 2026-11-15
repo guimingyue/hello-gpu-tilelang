@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "chapter12-tilelang-boundary",
+  "shapes": [
+    [
+      128,
+      64
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      256,
+      64
+    ],
+    [
+      32,
+      32
+    ]
+  ],
+  "seed": 20260920,
+  "correct": "OK",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "cases": [
+    {
+      "seq": 128,
+      "dim": 64,
+      "version": "online",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 2.1653249859809875e-08,
+      "max_tolerance_ratio": 0.0010513768060094045
+    },
+    {
+      "seq": 128,
+      "dim": 64,
+      "version": "online",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 1.043081283569336e-07,
+      "max_tolerance_ratio": 0.0015623538808532931
+    },
+    {
+      "seq": 64,
+      "dim": 64,
+      "version": "online",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 2.2351741790771484e-08,
+      "max_tolerance_ratio": 0.001098900401551928
+    },
+    {
+      "seq": 64,
+      "dim": 64,
+      "version": "online",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 2.2351741790771484e-08,
+      "max_tolerance_ratio": 0.0005999988528021934
+    },
+    {
+      "seq": 256,
+      "dim": 64,
+      "version": "online",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 2.0954757928848267e-08,
+      "max_tolerance_ratio": 0.001025875061704618
+    },
+    {
+      "seq": 256,
+      "dim": 64,
+      "version": "online",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 1.1920928955078125e-07,
+      "max_tolerance_ratio": 0.001949037597880546
+    },
+    {
+      "seq": 32,
+      "dim": 32,
+      "version": "online",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 4.470348358154297e-08,
+      "max_tolerance_ratio": 0.0012611930462456621
+    },
+    {
+      "seq": 32,
+      "dim": 32,
+      "version": "online",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 2.9802322387695312e-08,
+      "max_tolerance_ratio": 0.0007178023466836309
+    },
+    {
+      "seq": 128,
+      "dim": 64,
+      "version": "materialized",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 2.421438694000244e-08,
+      "max_tolerance_ratio": 0.0010744533311212157
+    },
+    {
+      "seq": 128,
+      "dim": 64,
+      "version": "materialized",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 2.2351741790771484e-08,
+      "max_tolerance_ratio": 0.0005669865761165416
+    },
+    {
+      "seq": 64,
+      "dim": 64,
+      "version": "materialized",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 2.1420419216156006e-08,
+      "max_tolerance_ratio": 0.001021597858842464
+    },
+    {
+      "seq": 64,
+      "dim": 64,
+      "version": "materialized",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 2.9802322387695312e-08,
+      "max_tolerance_ratio": 0.0006589295857565358
+    },
+    {
+      "seq": 256,
+      "dim": 64,
+      "version": "materialized",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 2.2351741790771484e-08,
+      "max_tolerance_ratio": 0.0010874196044010703
+    },
+    {
+      "seq": 256,
+      "dim": 64,
+      "version": "materialized",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 2.2351741790771484e-08,
+      "max_tolerance_ratio": 0.0006650495970934459
+    },
+    {
+      "seq": 32,
+      "dim": 32,
+      "version": "materialized",
+      "input": "dyadic",
+      "correct": "OK",
+      "max_abs_error": 3.725290298461914e-08,
+      "max_tolerance_ratio": 0.0009866647425388635
+    },
+    {
+      "seq": 32,
+      "dim": 32,
+      "version": "materialized",
+      "input": "rising-max",
+      "correct": "OK",
+      "max_abs_error": 4.470348358154297e-08,
+      "max_tolerance_ratio": 0.0009318464815722605
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,run_count,correct,median_ms,median_ms_run_min,median_ms_run_max,effective_bandwidth_gbs,provenance
+tilelang-t1024,tilelang-t1024,tilelang,4096x1024,float32,1024,1,4194304,tile,t1024,wall-clock-full-operator,10,50,20260920,3,OK,25.3977295,24.24825,25.4152085,1.32115872798787,measured-tilelang-metal
+tilelang-t256,tilelang-t256,tilelang,4096x1024,float32,256,1,1048576,tile,t256,wall-clock-full-operator,10,50,20260920,3,OK,2.1749795,2.137521,2.186,15.427470465813586,measured-tilelang-metal
+tilelang-t512,tilelang-t512,tilelang,4096x1024,float32,512,1,2097152,tile,t512,wall-clock-full-operator,10,50,20260920,3,OK,7.281625,7.181146,7.283479,4.608096681715963,measured-tilelang-metal
+mlx-ops,mlx-ops,mlx,4096x1024,float32,0,0,0,op,ops,wall-clock-full-operator,10,50,20260920,3,OK,2.5623750000000003,2.54275,2.5935835000000003,13.095051270793695,cited-hello-gpu-metal
+mlx-compile,mlx-compile,mlx,4096x1024,float32,0,0,0,op,compile,wall-clock-full-operator,10,50,20260920,3,OK,2.0068335,1.9595625,2.283833,16.720087640554137,cited-hello-gpu-metal
+mlx-kernel-w1-t128,mlx-kernel-w1-t128,mlx,4096x1024,float32,128,1,0,threads,w1t128,wall-clock-full-operator,10,50,20260920,3,OK,0.8450415,0.8443545,0.849396,39.70743685369298,cited-hello-gpu-metal
+mlx-kernel-w1-t256,mlx-kernel-w1-t256,mlx,4096x1024,float32,256,1,0,threads,w1t256,wall-clock-full-operator,10,50,20260920,3,OK,0.8450415,0.8415415,0.8512085,39.70743685369298,cited-hello-gpu-metal
+mlx-kernel-w2-t128,mlx-kernel-w2-t128,mlx,4096x1024,float32,128,2,0,threads,w2t128,wall-clock-full-operator,10,50,20260920,3,OK,0.878396,0.8750420000000001,0.8791255,38.19966393289587,cited-hello-gpu-metal
+mlx-kernel-w2-t256,mlx-kernel-w2-t256,mlx,4096x1024,float32,256,2,0,threads,w2t256,wall-clock-full-operator,10,50,20260920,3,OK,0.9216249999999999,0.9145625,0.9249995,36.407901261359015,cited-hello-gpu-metal

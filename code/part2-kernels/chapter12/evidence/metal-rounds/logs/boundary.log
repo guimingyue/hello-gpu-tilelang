@@ -1,0 +1,33 @@
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:16  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+RESULT operator=attention boundary=OK cases=16

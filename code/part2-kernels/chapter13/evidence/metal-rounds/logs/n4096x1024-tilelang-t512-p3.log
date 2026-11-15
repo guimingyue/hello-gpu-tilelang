@@ -1,0 +1,4 @@
+2026-11-14 01:11:12  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `rmsnorm` with `out_idx=None`
+2026-11-14 01:11:12  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `rmsnorm`
+ENV runtime=tilelang gpu=Apple M1 architecture=applegpu_g13g macos=27.0 python=3.12.11 tilelang=0.1.15 numpy=2.5.4 torch=2.15.0 mps_available=True
+RESULT operator=rmsnorm config_id=tilelang-t512 implementation=tilelang-t512 runtime=tilelang shape=4096x1024 dtype=float32 threadgroup=512 block=1 threads=2097152 dispatch=tile variant=t512 scope=wall-clock-full-operator warmup=10 repeat=50 seed=20260920 process=3 correct=OK precheck=OK postcheck=OK max_abs_error=2.38e-07 max_rel_error=2.38e-07 timed=1 median_ms=3.376875 min_ms=3.322542 max_ms=3.674583 effective_bandwidth_gbs=9.94

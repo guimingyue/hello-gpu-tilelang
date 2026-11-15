@@ -1,0 +1,102 @@
+/* hello-gpu-tilelang 站点视觉：figure 容器、品牌色与首页卡片。 */
+
+:root {
+  --vp-font-family-base: 'Helvetica Neue', 'Arial', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: 'SFMono-Regular', 'Menlo', 'Cascadia Code', 'Consolas', monospace;
+  --vp-c-brand-1: #2456a6;
+  --vp-c-brand-2: #2f6ac4;
+  --vp-c-brand-3: #2456a6;
+  --vp-c-brand-soft: #2456a614;
+}
+
+.figure {
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+}
+.figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+.figure-caption {
+  margin: 12px 0 0;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+.figure-ref {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--vp-c-brand-1);
+}
+
+/* 首页 */
+.hg-home {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+.hg-home h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  border: 0;
+  margin: 0 0 12px;
+}
+.hg-home .hg-lede {
+  color: var(--vp-c-text-2);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 760px;
+}
+.hg-home .hg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.hg-home .hg-card {
+  display: block;
+  padding: 18px 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.hg-home .hg-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+.hg-home .hg-card strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--vp-c-text-1);
+}
+.hg-home .hg-card span {
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.hg-home .hg-note {
+  padding: 14px 18px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* landing 章节表 */
+.hg-chapter-table td:first-child {
+  white-space: nowrap;
+}

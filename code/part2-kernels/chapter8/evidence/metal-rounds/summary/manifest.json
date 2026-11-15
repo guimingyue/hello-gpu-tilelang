@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "experiment": "chapter8-tilelang-vector-add-rounds",
+  "started_at": "2026-11-13T16:24:22.664623+00:00",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "source_sha256": {
+    "vector_add_tilelang.py": "122205f939d04acc95ae573a01bb1c31a754fcb4f6182851534723bb882c32c7",
+    "vector_add_common.py": "2990ef33f3c2029ed05a64a5bbb6b3b542c4c4e6019bd6fe474d7ae3e3441c46",
+    "vector_add_mlx.py": "60b963fed68a74c7b5092d9013f4ce36f947b947d0886cd3ac3a3f9f17a34716",
+    "run_rounds.py": "5f6f5b9cbe60009b47be35e549d0706f3db2f94968a59bba29ab726bab28a0b3",
+    "summarize_rounds.py": "b3bea4546ce5a2f4c4924676758b90698cca6bb170e95fd8d3f9809f28d639f6",
+    "validate_tilelang.py": "3fc199a91e3681f8e5c0870e73f234ae77ce33542a9f8b174d2a6cd8779cfc77"
+  },
+  "benchmark": {
+    "shape": 16777216,
+    "shape_tag": "n16777216",
+    "warmup": 10,
+    "repeat": 50,
+    "seed": 20260920,
+    "dtype": "float32",
+    "processes": 3,
+    "scope": "wall-clock-full-operator",
+    "timing": "wall-clock (TileLang Metal 无 GPU 时间戳接口)",
+    "correctness": "full finite + abs error <= 1e-6, NaN-prefilled output"
+  },
+  "configurations": [
+    {
+      "id": "tilelang-v0-b256",
+      "version": "v0",
+      "block": 256,
+      "elements": 1
+    },
+    {
+      "id": "tilelang-v0-b512",
+      "version": "v0",
+      "block": 512,
+      "elements": 1
+    },
+    {
+      "id": "tilelang-v1-e2",
+      "version": "v1",
+      "block": 256,
+      "elements": 2
+    },
+    {
+      "id": "tilelang-v1-e4",
+      "version": "v1",
+      "block": 256,
+      "elements": 4
+    },
+    {
+      "id": "tilelang-v1-e8",
+      "version": "v1",
+      "block": 256,
+      "elements": 8
+    }
+  ],
+  "execution_order": [
+    {
+      "process": 1,
+      "configs": [
+        "tilelang-v0-b256",
+        "tilelang-v0-b512",
+        "tilelang-v1-e2",
+        "tilelang-v1-e4",
+        "tilelang-v1-e8"
+      ]
+    },
+    {
+      "process": 2,
+      "configs": [
+        "tilelang-v0-b512",
+        "tilelang-v1-e2",
+        "tilelang-v1-e4",
+        "tilelang-v1-e8",
+        "tilelang-v0-b256"
+      ]
+    },
+    {
+      "process": 3,
+      "configs": [
+        "tilelang-v1-e2",
+        "tilelang-v1-e4",
+        "tilelang-v1-e8",
+        "tilelang-v0-b256",
+        "tilelang-v0-b512"
+      ]
+    }
+  ],
+  "updated_at": "2026-11-13T16:25:01.372946+00:00",
+  "sample_sha256": {
+    "samples/n16777216-tilelang-v0-b256-p1.csv": "5e124576f8a948424f897820425fbafe76f5ce0271d63a9f398bb4cd03bd6fff",
+    "samples/n16777216-tilelang-v0-b256-p2.csv": "33bf09cf1572bb9f5859ad420eeeb93f980ab8d6ab75f0b919ecba158d39f57b",
+    "samples/n16777216-tilelang-v0-b256-p3.csv": "36e547f5800767e9f178b96f778862848055e1ebcd5d20f479875a4134bcef55",
+    "samples/n16777216-tilelang-v0-b512-p1.csv": "305a20fb95fa4ee8cba50d05eb09236f9c756533d8a56dbf7d85d1da0c35032b",
+    "samples/n16777216-tilelang-v0-b512-p2.csv": "6f2b5eb91a5bd8cb49500ccac9e6315a3df3133199814c817630be6082951d3e",
+    "samples/n16777216-tilelang-v0-b512-p3.csv": "05d97f144a5bfaf2d8a43abfe733a3781af794573e988af4b85790b375b42bda",
+    "samples/n16777216-tilelang-v1-e2-p1.csv": "89408af4398c666e6fe53ac3786e83d234985196afb69efb7431c8ebfd6f534d",
+    "samples/n16777216-tilelang-v1-e2-p2.csv": "2033f807b2004c192d3cf774f66847fa0291cf559cab97cccb2632b09c68381c",
+    "samples/n16777216-tilelang-v1-e2-p3.csv": "9309cd9c14bf0d072702720fe605f85352a3ad95824c1c51c935a220b275ecd0",
+    "samples/n16777216-tilelang-v1-e4-p1.csv": "d93e58aca29a3b217371ddd9f4c178eb09b100a79a21e5b8c72863519b2d5bd7",
+    "samples/n16777216-tilelang-v1-e4-p2.csv": "b85dae270aa1e95e5bb2c92e610903630a8935ab52c660b629897ca781b57e08",
+    "samples/n16777216-tilelang-v1-e4-p3.csv": "28059e612fd58b40696d66c6ef96cc07896570c0392bcfcd4707e3c548f0d69a",
+    "samples/n16777216-tilelang-v1-e8-p1.csv": "0965c3a0674fa02574403a103c193741ce7f0eb300e256f6f027ea37cb162dd7",
+    "samples/n16777216-tilelang-v1-e8-p2.csv": "58d4d91e97bdd089be1ec99dc00d77a1660c6ee218fbeb6331aa76c7baff6d0f",
+    "samples/n16777216-tilelang-v1-e8-p3.csv": "20e5491481836063a417a5c94bd3f3db60dbd77f416392f0bbb9280b759b0a7f"
+  },
+  "statistics": {
+    "within_process": "median of wall-clock samples",
+    "across_processes": "median of process medians; min/max of process medians",
+    "range_is_confidence_interval": false,
+    "scope": "wall-clock-full-operator (TileLang Metal 无 GPU 时间戳接口)",
+    "mlx_provenance": "cited from hello-gpu-metal same-caliber wall-clock experiments"
+  }
+}

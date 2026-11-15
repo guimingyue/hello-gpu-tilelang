@@ -1,0 +1,7 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,process,sample_count,median_ms,min_ms,max_ms,sample_file
+tilelang-materialized,tilelang-materialized,tilelang,128x64,float32,64,0,8192,tile,materialized,wall-clock-full-operator,10,50,20260920,1,50,1.196354,0.983917,1.478,samples/n128x64-tilelang-materialized-p1.csv
+tilelang-materialized,tilelang-materialized,tilelang,128x64,float32,64,0,8192,tile,materialized,wall-clock-full-operator,10,50,20260920,2,50,1.199875,1.100542,1.527417,samples/n128x64-tilelang-materialized-p2.csv
+tilelang-materialized,tilelang-materialized,tilelang,128x64,float32,64,0,8192,tile,materialized,wall-clock-full-operator,10,50,20260920,3,50,1.175042,1.034375,1.537625,samples/n128x64-tilelang-materialized-p3.csv
+tilelang-online,tilelang-online,tilelang,128x64,float32,64,0,8192,tile,online,wall-clock-full-operator,10,50,20260920,1,50,1.202396,1.00975,1.478083,samples/n128x64-tilelang-online-p1.csv
+tilelang-online,tilelang-online,tilelang,128x64,float32,64,0,8192,tile,online,wall-clock-full-operator,10,50,20260920,2,50,1.3184585000000002,1.149042,1.6095,samples/n128x64-tilelang-online-p2.csv
+tilelang-online,tilelang-online,tilelang,128x64,float32,64,0,8192,tile,online,wall-clock-full-operator,10,50,20260920,3,50,1.203063,1.004875,1.280584,samples/n128x64-tilelang-online-p3.csv

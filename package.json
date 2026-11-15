@@ -1,0 +1,20 @@
+{
+  "name": "hello-gpu-tilelang",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "2.0.0-alpha.18",
+    "vue": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

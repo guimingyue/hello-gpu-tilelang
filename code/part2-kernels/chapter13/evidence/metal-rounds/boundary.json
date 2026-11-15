@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "kind": "chapter13-tilelang-boundary",
+  "shapes": [
+    [
+      8,
+      64
+    ],
+    [
+      64,
+      256
+    ],
+    [
+      256,
+      1024
+    ],
+    [
+      64,
+      1025
+    ]
+  ],
+  "seed": 20260920,
+  "correct": "OK",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "cases": [
+    {
+      "rows": 8,
+      "cols": 64,
+      "threads": 64,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 1.1920928955078125e-07,
+      "max_rel_error": 1.6547653187003538e-07
+    },
+    {
+      "rows": 8,
+      "cols": 64,
+      "threads": 64,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 8,
+      "cols": 64,
+      "threads": 64,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 1.866947853906103e-07
+    },
+    {
+      "rows": 64,
+      "cols": 256,
+      "threads": 256,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3227104172400858e-07
+    },
+    {
+      "rows": 64,
+      "cols": 256,
+      "threads": 256,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 64,
+      "cols": 256,
+      "threads": 256,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.2006364240538365e-07
+    },
+    {
+      "rows": 256,
+      "cols": 1024,
+      "threads": 256,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.375173640037922e-07
+    },
+    {
+      "rows": 256,
+      "cols": 1024,
+      "threads": 256,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 256,
+      "cols": 1024,
+      "threads": 256,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3544532894714382e-07
+    },
+    {
+      "rows": 64,
+      "cols": 1025,
+      "threads": 256,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3664161065852746e-07
+    },
+    {
+      "rows": 64,
+      "cols": 1025,
+      "threads": 256,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 64,
+      "cols": 1025,
+      "threads": 256,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3615633832985043e-07
+    },
+    {
+      "rows": 8,
+      "cols": 64,
+      "threads": 64,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 1.1920928955078125e-07,
+      "max_rel_error": 1.6547653187003538e-07
+    },
+    {
+      "rows": 8,
+      "cols": 64,
+      "threads": 64,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 8,
+      "cols": 64,
+      "threads": 64,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 1.866947853906103e-07
+    },
+    {
+      "rows": 64,
+      "cols": 256,
+      "threads": 256,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3227104172400858e-07
+    },
+    {
+      "rows": 64,
+      "cols": 256,
+      "threads": 256,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 64,
+      "cols": 256,
+      "threads": 256,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.2006364240538365e-07
+    },
+    {
+      "rows": 256,
+      "cols": 1024,
+      "threads": 1024,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.375173640037922e-07
+    },
+    {
+      "rows": 256,
+      "cols": 1024,
+      "threads": 1024,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 256,
+      "cols": 1024,
+      "threads": 1024,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3544532894714382e-07
+    },
+    {
+      "rows": 64,
+      "cols": 1025,
+      "threads": 1024,
+      "input_mode": "normal",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3664161065852746e-07
+    },
+    {
+      "rows": 64,
+      "cols": 1025,
+      "threads": 1024,
+      "input_mode": "zero",
+      "correct": "OK",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0
+    },
+    {
+      "rows": 64,
+      "cols": 1025,
+      "threads": 1024,
+      "input_mode": "signed-weight",
+      "correct": "OK",
+      "max_abs_error": 2.384185791015625e-07,
+      "max_rel_error": 2.3615633832985043e-07
+    }
+  ]
+}

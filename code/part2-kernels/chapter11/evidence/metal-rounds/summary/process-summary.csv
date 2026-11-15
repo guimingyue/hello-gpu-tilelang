@@ -1,0 +1,10 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,process,sample_count,median_ms,min_ms,max_ms,sample_file
+tilelang-tile16,tilelang-tile16,tilelang,1024x1024x1024,float32,128,16,0,tile,tile16,wall-clock-full-operator,10,50,20260920,1,50,2.534146,2.490459,2.587584,samples/n1024x1024x1024-tilelang-tile16-p1.csv
+tilelang-tile16,tilelang-tile16,tilelang,1024x1024x1024,float32,128,16,0,tile,tile16,wall-clock-full-operator,10,50,20260920,2,50,2.5551665000000003,2.497666,2.617041,samples/n1024x1024x1024-tilelang-tile16-p2.csv
+tilelang-tile16,tilelang-tile16,tilelang,1024x1024x1024,float32,128,16,0,tile,tile16,wall-clock-full-operator,10,50,20260920,3,50,2.5622914999999997,2.490375,2.604375,samples/n1024x1024x1024-tilelang-tile16-p3.csv
+tilelang-tile32,tilelang-tile32,tilelang,1024x1024x1024,float32,128,32,0,tile,tile32,wall-clock-full-operator,10,50,20260920,1,50,1.7512085,1.710708,1.86325,samples/n1024x1024x1024-tilelang-tile32-p1.csv
+tilelang-tile32,tilelang-tile32,tilelang,1024x1024x1024,float32,128,32,0,tile,tile32,wall-clock-full-operator,10,50,20260920,2,50,1.7355420000000001,1.696958,1.940583,samples/n1024x1024x1024-tilelang-tile32-p2.csv
+tilelang-tile32,tilelang-tile32,tilelang,1024x1024x1024,float32,128,32,0,tile,tile32,wall-clock-full-operator,10,50,20260920,3,50,1.7595835,1.708666,1.874125,samples/n1024x1024x1024-tilelang-tile32-p3.csv
+tilelang-tile64,tilelang-tile64,tilelang,1024x1024x1024,float32,128,64,0,tile,tile64,wall-clock-full-operator,10,50,20260920,1,50,80.62629100000001,79.489417,82.84,samples/n1024x1024x1024-tilelang-tile64-p1.csv
+tilelang-tile64,tilelang-tile64,tilelang,1024x1024x1024,float32,128,64,0,tile,tile64,wall-clock-full-operator,10,50,20260920,2,50,80.54010450000001,77.620666,83.259083,samples/n1024x1024x1024-tilelang-tile64-p2.csv
+tilelang-tile64,tilelang-tile64,tilelang,1024x1024x1024,float32,128,64,0,tile,tile64,wall-clock-full-operator,10,50,20260920,3,50,80.1765415,79.356709,82.579833,samples/n1024x1024x1024-tilelang-tile64-p3.csv

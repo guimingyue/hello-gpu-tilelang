@@ -1,0 +1,4 @@
+2026-11-14 00:51:25  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:51:25  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+ENV runtime=tilelang gpu=Apple M1 architecture=applegpu_g13g macos=27.0 python=3.12.11 tilelang=0.1.15 numpy=2.5.4 torch=2.15.0 mps_available=True
+RESULT operator=matmul config_id=tilelang-tile16 implementation=tilelang-tile16 runtime=tilelang shape=1024x1024x1024 dtype=float32 threadgroup=128 block=16 threads=0 dispatch=tile variant=tile16 scope=wall-clock-full-operator warmup=10 repeat=50 seed=20260920 process=3 correct=OK precheck=OK postcheck=OK max_abs_error=0.00513 max_error_ratio=0.00257 timed=1 median_ms=2.562291 min_ms=2.490375 max_ms=2.604375 tflops=0.838

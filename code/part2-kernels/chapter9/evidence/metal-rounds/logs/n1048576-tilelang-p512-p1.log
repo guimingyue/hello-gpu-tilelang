@@ -1,0 +1,6 @@
+2026-11-14 00:42:33  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `partial` with `out_idx=None`
+2026-11-14 00:42:33  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `partial`
+2026-11-14 00:42:33  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `final` with `out_idx=None`
+2026-11-14 00:42:33  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `final`
+ENV runtime=tilelang gpu=Apple M1 architecture=applegpu_g13g macos=27.0 python=3.12.11 tilelang=0.1.15 numpy=2.5.4 torch=2.15.0 mps_available=True
+RESULT operator=sum-reduction config_id=tilelang-p512 implementation=tilelang-p512 runtime=tilelang shape=1048576 dtype=float32 threadgroup=256 block=512 threads=131072 dispatch=tile variant=p512 scope=wall-clock-full-operator warmup=5 repeat=10 seed=20260920 process=1 input=random correct=OK precheck=OK postcheck=OK max_abs_error=0 timed=1 median_ms=0.689479 min_ms=0.650083 max_ms=0.748458 logical_bandwidth_gbs=6.08

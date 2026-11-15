@@ -1,0 +1,13 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,process,sample_count,median_ms,min_ms,max_ms,sample_file
+tilelang-p1024,tilelang-p1024,tilelang,1048576,float32,256,1024,262144,tile,p1024,wall-clock-full-operator,5,10,20260920,1,10,0.8130204999999999,0.716958,0.896791,samples/n1048576-tilelang-p1024-p1.csv
+tilelang-p1024,tilelang-p1024,tilelang,1048576,float32,256,1024,262144,tile,p1024,wall-clock-full-operator,5,10,20260920,2,10,0.8133334999999999,0.773625,0.853,samples/n1048576-tilelang-p1024-p2.csv
+tilelang-p1024,tilelang-p1024,tilelang,1048576,float32,256,1024,262144,tile,p1024,wall-clock-full-operator,5,10,20260920,3,10,0.8175625,0.74025,0.8365,samples/n1048576-tilelang-p1024-p3.csv
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,1,10,0.45458350000000003,0.448834,0.494833,samples/n1048576-tilelang-p128-p1.csv
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,2,10,0.4895625,0.468209,0.533125,samples/n1048576-tilelang-p128-p2.csv
+tilelang-p128,tilelang-p128,tilelang,1048576,float32,256,128,32768,tile,p128,wall-clock-full-operator,5,10,20260920,3,10,0.518521,0.471416,0.534917,samples/n1048576-tilelang-p128-p3.csv
+tilelang-p256,tilelang-p256,tilelang,1048576,float32,256,256,65536,tile,p256,wall-clock-full-operator,5,10,20260920,1,10,0.5481244999999999,0.495125,0.619208,samples/n1048576-tilelang-p256-p1.csv
+tilelang-p256,tilelang-p256,tilelang,1048576,float32,256,256,65536,tile,p256,wall-clock-full-operator,5,10,20260920,2,10,0.5439784999999999,0.517333,0.592292,samples/n1048576-tilelang-p256-p2.csv
+tilelang-p256,tilelang-p256,tilelang,1048576,float32,256,256,65536,tile,p256,wall-clock-full-operator,5,10,20260920,3,10,0.5454375,0.510875,0.614041,samples/n1048576-tilelang-p256-p3.csv
+tilelang-p512,tilelang-p512,tilelang,1048576,float32,256,512,131072,tile,p512,wall-clock-full-operator,5,10,20260920,1,10,0.689479,0.650083,0.748458,samples/n1048576-tilelang-p512-p1.csv
+tilelang-p512,tilelang-p512,tilelang,1048576,float32,256,512,131072,tile,p512,wall-clock-full-operator,5,10,20260920,2,10,0.6532709999999999,0.580625,0.706416,samples/n1048576-tilelang-p512-p2.csv
+tilelang-p512,tilelang-p512,tilelang,1048576,float32,256,512,131072,tile,p512,wall-clock-full-operator,5,10,20260920,3,10,0.6383540000000001,0.6,0.677708,samples/n1048576-tilelang-p512-p3.csv

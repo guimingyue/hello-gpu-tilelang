@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "experiment": "chapter11-tilelang-matmul-rounds",
+  "started_at": "2026-11-13T16:50:55.446080+00:00",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "source_sha256": {
+    "matmul_tilelang.py": "5b30dc9eecf75933637199f38ef7824c62a3495066aa756897c4d80c19af554b",
+    "matmul_common.py": "a8eb27fe6988b86a3ba12b2df266a75a33f7dd6b3ab92234ff7b4bcf8f8b5e3a",
+    "matmul_mlx.py": "985563a700bced0c371f02662160d8288dff0288b71d25ec27f0c8ed4917ab94",
+    "run_rounds.py": "e725e12b886393b254791efc7497a3fa5dda8c35a2f395c798de4a51dd6c34b4",
+    "summarize_rounds.py": "22454dc67602fda8133ecf70df5b7228fe2ff254ebbe738db999cc68241797e5",
+    "validate_tilelang.py": "6eeef63130abab3e0e1d1c7cbe3f5fb702e28876646c66fd7f36d39cb25c9a21"
+  },
+  "benchmark": {
+    "shape": "1024x1024x1024",
+    "shape_tag": "n1024x1024x1024",
+    "warmup": 10,
+    "repeat": 50,
+    "seed": 20260920,
+    "dtype": "float32",
+    "processes": 3,
+    "scope": "wall-clock-full-operator",
+    "timing": "wall-clock (TileLang Metal 无 GPU 时间戳接口)",
+    "correctness": "FP64 matmul reference; Higham FP32 bound; NaN-prefilled output"
+  },
+  "configurations": [
+    {
+      "id": "tilelang-tile16",
+      "tile": 16
+    },
+    {
+      "id": "tilelang-tile32",
+      "tile": 32
+    },
+    {
+      "id": "tilelang-tile64",
+      "tile": 64
+    }
+  ],
+  "execution_order": [
+    {
+      "process": 1,
+      "configs": [
+        "tilelang-tile16",
+        "tilelang-tile32",
+        "tilelang-tile64"
+      ]
+    },
+    {
+      "process": 2,
+      "configs": [
+        "tilelang-tile32",
+        "tilelang-tile64",
+        "tilelang-tile16"
+      ]
+    },
+    {
+      "process": 3,
+      "configs": [
+        "tilelang-tile64",
+        "tilelang-tile16",
+        "tilelang-tile32"
+      ]
+    }
+  ],
+  "updated_at": "2026-11-13T16:51:27.572864+00:00"
+}

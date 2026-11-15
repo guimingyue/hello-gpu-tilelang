@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "experiment": "chapter9-tilelang-reduction-rounds",
+  "started_at": "2026-11-13T16:42:19.327368+00:00",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "source_sha256": {
+    "reduction_tilelang.py": "6a46430f6f7a1c2dd3f995c671a9af4967552e4b0c251b5afb4fa1dcf287bcbe",
+    "reduction_common.py": "5975821e1be868261f24c8771193ead834e79a8a06c74ed0488f86f032a778d8",
+    "reduction_mlx.py": "e3c1cda5eea2fbd73748817fc421bb5c7522c2f4839d3b33ed9d2717ffde4e82",
+    "run_rounds.py": "6f1806a7163a604c09499b50c5894ab5202a707a1725880cb35591cace12b67f",
+    "summarize_rounds.py": "9c177b45f3e5430818448d5c1cf980efe28072cd81d2891f7aae616f123b5b42",
+    "validate_tilelang.py": "7ed374ec0de1c5f40e96571c612eb015f7b4241cf01883a733118130cacbac78"
+  },
+  "benchmark": {
+    "shape": 1048576,
+    "shape_tag": "n1048576",
+    "warmup": 5,
+    "repeat": 10,
+    "seed": 20260920,
+    "dtype": "float32",
+    "processes": 3,
+    "input": "random",
+    "scope": "wall-clock-full-operator",
+    "timing": "wall-clock (TileLang Metal 无 GPU 时间戳接口)",
+    "correctness": "exact FP64 comparison for random dyadic input; NaN-prefilled output"
+  },
+  "configurations": [
+    {
+      "id": "tilelang-p128",
+      "programs": 128
+    },
+    {
+      "id": "tilelang-p256",
+      "programs": 256
+    },
+    {
+      "id": "tilelang-p512",
+      "programs": 512
+    },
+    {
+      "id": "tilelang-p1024",
+      "programs": 1024
+    }
+  ],
+  "execution_order": [
+    {
+      "process": 1,
+      "configs": [
+        "tilelang-p128",
+        "tilelang-p256",
+        "tilelang-p512",
+        "tilelang-p1024"
+      ]
+    },
+    {
+      "process": 2,
+      "configs": [
+        "tilelang-p256",
+        "tilelang-p512",
+        "tilelang-p1024",
+        "tilelang-p128"
+      ]
+    },
+    {
+      "process": 3,
+      "configs": [
+        "tilelang-p512",
+        "tilelang-p1024",
+        "tilelang-p128",
+        "tilelang-p256"
+      ]
+    }
+  ],
+  "updated_at": "2026-11-13T16:42:46.826695+00:00"
+}

@@ -1,0 +1,10 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,process,sample_count,median_ms,min_ms,max_ms,sample_file
+tilelang-t1024,tilelang-t1024,tilelang,4096x1024,float32,1024,1,4194304,tile,t1024,wall-clock-full-operator,10,50,20260920,1,50,24.24825,24.050167,25.594959,samples/n4096x1024-tilelang-t1024-p1.csv
+tilelang-t1024,tilelang-t1024,tilelang,4096x1024,float32,1024,1,4194304,tile,t1024,wall-clock-full-operator,10,50,20260920,2,50,25.3977295,24.238167,25.653792,samples/n4096x1024-tilelang-t1024-p2.csv
+tilelang-t1024,tilelang-t1024,tilelang,4096x1024,float32,1024,1,4194304,tile,t1024,wall-clock-full-operator,10,50,20260920,3,50,25.4152085,24.191333,25.662458,samples/n4096x1024-tilelang-t1024-p3.csv
+tilelang-t256,tilelang-t256,tilelang,4096x1024,float32,256,1,1048576,tile,t256,wall-clock-full-operator,10,50,20260920,1,50,2.1749795,2.109459,2.224292,samples/n4096x1024-tilelang-t256-p1.csv
+tilelang-t256,tilelang-t256,tilelang,4096x1024,float32,256,1,1048576,tile,t256,wall-clock-full-operator,10,50,20260920,2,50,2.186,2.124458,2.235334,samples/n4096x1024-tilelang-t256-p2.csv
+tilelang-t256,tilelang-t256,tilelang,4096x1024,float32,256,1,1048576,tile,t256,wall-clock-full-operator,10,50,20260920,3,50,2.137521,2.0885,2.208792,samples/n4096x1024-tilelang-t256-p3.csv
+tilelang-t512,tilelang-t512,tilelang,4096x1024,float32,512,1,2097152,tile,t512,wall-clock-full-operator,10,50,20260920,1,50,7.283479,6.759125,7.516209,samples/n4096x1024-tilelang-t512-p1.csv
+tilelang-t512,tilelang-t512,tilelang,4096x1024,float32,512,1,2097152,tile,t512,wall-clock-full-operator,10,50,20260920,2,50,7.281625,6.905,7.4905,samples/n4096x1024-tilelang-t512-p2.csv
+tilelang-t512,tilelang-t512,tilelang,4096x1024,float32,512,1,2097152,tile,t512,wall-clock-full-operator,10,50,20260920,3,50,7.181146,6.549416,7.522459,samples/n4096x1024-tilelang-t512-p3.csv

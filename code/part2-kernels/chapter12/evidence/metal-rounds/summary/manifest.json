@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "experiment": "chapter12-tilelang-attention-rounds",
+  "started_at": "2026-11-13T16:58:14.913308+00:00",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "source_sha256": {
+    "attention_tilelang.py": "b400624f533950656995d75348c3aaa2dcea3d35c08d04b8dafbc2fd1690ca2b",
+    "attention_common.py": "43334bf8456a2fb7eaf53c236e97926e32bd9532e669e3b8de79857bc0377030",
+    "attention_mlx.py": "b883e3953207b92706997e41dec66bcaf619b1d7904c29e5fd90b03fc764ee94",
+    "run_rounds.py": "ce2cbb7c760c5039b70807bd78ff5ec3b367fb3c0a898a4a79e37cebcdb15fed",
+    "summarize_rounds.py": "92b62f844efd502772fb4e7ec40bcb827e9ed33b2ee86758ed1497cc7768d90f",
+    "validate_tilelang.py": "b09d2c2d2db06232b7257f3f66d4a0caec7ca117d7e4febda305ac601229106c"
+  },
+  "benchmark": {
+    "shape": "128x64",
+    "shape_tag": "n128x64",
+    "warmup": 10,
+    "repeat": 50,
+    "seed": 20260920,
+    "dtype": "float32",
+    "processes": 3,
+    "scope": "wall-clock-full-operator",
+    "timing": "wall-clock (TileLang Metal 无 GPU 时间戳接口)",
+    "correctness": "FP64 attention reference; atol=2e-5 rtol=2e-4; NaN-prefilled"
+  },
+  "configurations": [
+    {
+      "id": "tilelang-online",
+      "version": "online"
+    },
+    {
+      "id": "tilelang-materialized",
+      "version": "materialized"
+    }
+  ],
+  "execution_order": [
+    {
+      "process": 1,
+      "configs": [
+        "tilelang-online",
+        "tilelang-materialized"
+      ]
+    },
+    {
+      "process": 2,
+      "configs": [
+        "tilelang-materialized",
+        "tilelang-online"
+      ]
+    },
+    {
+      "process": 3,
+      "configs": [
+        "tilelang-online",
+        "tilelang-materialized"
+      ]
+    }
+  ],
+  "updated_at": "2026-11-13T16:58:26.924120+00:00",
+  "sample_sha256": {
+    "samples/n128x64-tilelang-materialized-p1.csv": "4fa65d8e1090494698919076c1367e892349f5a13284730f33f79d9d63e90414",
+    "samples/n128x64-tilelang-materialized-p2.csv": "1bf685e30b19f52a540482b2c61c89ff3d2f5602db32346c4cce8484fd8cc70d",
+    "samples/n128x64-tilelang-materialized-p3.csv": "07fb292972bd3635d3b0647ee015529b210066e43366800b3c4ae8cf8169e292",
+    "samples/n128x64-tilelang-online-p1.csv": "fe43d0317edf317ffbcb7e1eeb450b507b82f67f147fa14ebde4d8c3e26cf96f",
+    "samples/n128x64-tilelang-online-p2.csv": "4ef2e947ab7d6b0396f09125ea96dd0ca9f3be517777a273e20ad6df9c5dcfbf",
+    "samples/n128x64-tilelang-online-p3.csv": "2f2e1a68b525a87c07d14326d47dd6ca16667e99bbb9c48be98154dbb155257f"
+  },
+  "statistics": {
+    "within_process": "median of wall-clock samples",
+    "across_processes": "median of process medians; min/max of process medians",
+    "range_is_confidence_interval": false,
+    "scope": "wall-clock-full-operator (TileLang Metal 无 GPU 时间戳接口)",
+    "mlx_provenance": "cited from hello-gpu-metal same-caliber wall-clock experiments"
+  }
+}

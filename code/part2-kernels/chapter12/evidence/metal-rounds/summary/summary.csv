@@ -1,0 +1,6 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,run_count,correct,median_ms,median_ms_run_min,median_ms_run_max,provenance
+tilelang-materialized,tilelang-materialized,tilelang,128x64,float32,64,0,8192,tile,materialized,wall-clock-full-operator,10,50,20260920,3,OK,1.196354,1.175042,1.199875,measured-tilelang-metal
+tilelang-online,tilelang-online,tilelang,128x64,float32,64,0,8192,tile,online,wall-clock-full-operator,10,50,20260920,3,OK,1.203063,1.202396,1.3184585000000002,measured-tilelang-metal
+mlx-materialized,mlx-materialized,mlx,128x64,float32,0,0,0,op,materialized,wall-clock-full-operator,10,50,20260920,3,OK,0.25606201961636543,0.2289375406689942,0.3533539711497724,cited-hello-gpu-metal
+mlx-compiled,mlx-compiled,mlx,128x64,float32,0,0,0,op,compiled,wall-clock-full-operator,10,50,20260920,3,OK,0.2639994490891695,0.2537085092626512,0.3492914838716388,cited-hello-gpu-metal
+mlx-online-k32,mlx-online-k32,mlx,128x64,float32,0,32,0,op,online-k32,wall-clock-full-operator,10,50,20260920,3,OK,0.2849375014193356,0.28437498258426785,0.31166645931079984,cited-hello-gpu-metal

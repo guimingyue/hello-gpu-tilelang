@@ -1,0 +1,25 @@
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:22  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `softmax` with `out_idx=None`
+2026-11-14 00:47:23  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `softmax`
+RESULT operator=softmax boundary=OK cases=12

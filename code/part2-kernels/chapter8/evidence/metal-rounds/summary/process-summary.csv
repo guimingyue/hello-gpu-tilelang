@@ -1,0 +1,16 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,process,sample_count,median_ms,min_ms,max_ms,sample_file
+tilelang-v0-b256,tilelang-v0,tilelang,16777216,float32,256,1,16777216,threads,b256e1,wall-clock-full-operator,10,50,20260920,1,50,3.601042,3.529209,4.040458,samples/n16777216-tilelang-v0-b256-p1.csv
+tilelang-v0-b256,tilelang-v0,tilelang,16777216,float32,256,1,16777216,threads,b256e1,wall-clock-full-operator,10,50,20260920,2,50,3.6597915,3.5405,4.028208,samples/n16777216-tilelang-v0-b256-p2.csv
+tilelang-v0-b256,tilelang-v0,tilelang,16777216,float32,256,1,16777216,threads,b256e1,wall-clock-full-operator,10,50,20260920,3,50,3.6390624999999996,3.534584,3.894833,samples/n16777216-tilelang-v0-b256-p3.csv
+tilelang-v0-b512,tilelang-v0,tilelang,16777216,float32,512,1,16777216,threads,b512e1,wall-clock-full-operator,10,50,20260920,1,50,3.6384369999999997,3.548709,3.887708,samples/n16777216-tilelang-v0-b512-p1.csv
+tilelang-v0-b512,tilelang-v0,tilelang,16777216,float32,512,1,16777216,threads,b512e1,wall-clock-full-operator,10,50,20260920,2,50,3.6335205000000004,3.547708,3.982375,samples/n16777216-tilelang-v0-b512-p2.csv
+tilelang-v0-b512,tilelang-v0,tilelang,16777216,float32,512,1,16777216,threads,b512e1,wall-clock-full-operator,10,50,20260920,3,50,3.6418125,3.5505,3.905667,samples/n16777216-tilelang-v0-b512-p3.csv
+tilelang-v1-e2,tilelang-v1,tilelang,16777216,float32,256,2,8388608,threads,b256e2,wall-clock-full-operator,10,50,20260920,1,50,3.6806669999999997,3.593042,3.898458,samples/n16777216-tilelang-v1-e2-p1.csv
+tilelang-v1-e2,tilelang-v1,tilelang,16777216,float32,256,2,8388608,threads,b256e2,wall-clock-full-operator,10,50,20260920,2,50,3.687062,3.577208,4.065583,samples/n16777216-tilelang-v1-e2-p2.csv
+tilelang-v1-e2,tilelang-v1,tilelang,16777216,float32,256,2,8388608,threads,b256e2,wall-clock-full-operator,10,50,20260920,3,50,3.6855625,3.581459,4.045167,samples/n16777216-tilelang-v1-e2-p3.csv
+tilelang-v1-e4,tilelang-v1,tilelang,16777216,float32,256,4,4194304,threads,b256e4,wall-clock-full-operator,10,50,20260920,1,50,3.7810005,3.689333,4.096125,samples/n16777216-tilelang-v1-e4-p1.csv
+tilelang-v1-e4,tilelang-v1,tilelang,16777216,float32,256,4,4194304,threads,b256e4,wall-clock-full-operator,10,50,20260920,2,50,3.7900419999999997,3.678666,4.086416,samples/n16777216-tilelang-v1-e4-p2.csv
+tilelang-v1-e4,tilelang-v1,tilelang,16777216,float32,256,4,4194304,threads,b256e4,wall-clock-full-operator,10,50,20260920,3,50,3.7912705,3.678042,4.133458,samples/n16777216-tilelang-v1-e4-p3.csv
+tilelang-v1-e8,tilelang-v1,tilelang,16777216,float32,256,8,2097152,threads,b256e8,wall-clock-full-operator,10,50,20260920,1,50,3.7699995,3.661375,4.222083,samples/n16777216-tilelang-v1-e8-p1.csv
+tilelang-v1-e8,tilelang-v1,tilelang,16777216,float32,256,8,2097152,threads,b256e8,wall-clock-full-operator,10,50,20260920,2,50,3.7496460000000003,3.665667,3.929292,samples/n16777216-tilelang-v1-e8-p2.csv
+tilelang-v1-e8,tilelang-v1,tilelang,16777216,float32,256,8,2097152,threads,b256e8,wall-clock-full-operator,10,50,20260920,3,50,3.7632295,3.675125,4.002541,samples/n16777216-tilelang-v1-e8-p3.csv

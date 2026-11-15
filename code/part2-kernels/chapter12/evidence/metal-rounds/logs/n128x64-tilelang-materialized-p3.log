@@ -1,0 +1,4 @@
+2026-11-14 00:58:26  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `attn` with `out_idx=None`
+2026-11-14 00:58:26  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `attn`
+ENV runtime=tilelang gpu=Apple M1 architecture=applegpu_g13g macos=27.0 python=3.12.11 tilelang=0.1.15 numpy=2.5.4 torch=2.15.0 mps_available=True
+RESULT operator=attention config_id=tilelang-materialized implementation=tilelang-materialized runtime=tilelang shape=128x64 dtype=float32 threadgroup=64 block=0 threads=8192 dispatch=tile variant=materialized scope=wall-clock-full-operator warmup=10 repeat=50 seed=20260920 process=3 correct=OK precheck=OK postcheck=OK max_abs_error=2.42e-08 max_tolerance_ratio=0.00107 timed=1 median_ms=1.175042 min_ms=1.034375 max_ms=1.537625

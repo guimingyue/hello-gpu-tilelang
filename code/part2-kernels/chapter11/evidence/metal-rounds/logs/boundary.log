@@ -1,0 +1,17 @@
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:56  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `matmul` with `out_idx=None`
+2026-11-14 00:50:57  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `matmul`
+RESULT operator=matmul boundary=OK cases=8

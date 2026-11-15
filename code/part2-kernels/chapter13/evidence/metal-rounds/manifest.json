@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "experiment": "chapter13-tilelang-rmsnorm-rounds",
+  "started_at": "2026-11-13T17:10:51.913292+00:00",
+  "environment": {
+    "runtime": "tilelang",
+    "gpu": "Apple M1",
+    "architecture": "applegpu_g13g",
+    "macos": "27.0",
+    "python": "3.12.11",
+    "tilelang": "0.1.15",
+    "numpy": "2.5.4",
+    "torch": "2.15.0",
+    "mps_available": "True"
+  },
+  "source_sha256": {
+    "rmsnorm_tilelang.py": "52babb8c05f5c124ccb08a96279360fc20444bf31ff0c9d19ebc7ab45c9859c4",
+    "rmsnorm_common.py": "24de5755be53b083ed98db6756ddc820ee7483aa28fb0b22255db2cdf889cdb5",
+    "rmsnorm_mlx.py": "d2448566177523b73abcf824a8988ffd731c303a14544c08913e8e160544781e",
+    "run_rounds.py": "051afe41b024d0ba8e9782caefe71df442e793c10d71931a60ee3f98f65c0c36",
+    "summarize_rounds.py": "c72a7647840c4acfd1250ec9e9724096509e0a5cc5183c37fa3946b91ac4f3dd",
+    "validate_tilelang.py": "988aa2adb8e0290fab40b443f06fadb969d13af646336f9272d4216e4b376570"
+  },
+  "benchmark": {
+    "shape": "4096x1024",
+    "shape_tag": "n4096x1024",
+    "warmup": 10,
+    "repeat": 50,
+    "seed": 20260920,
+    "dtype": "float32",
+    "processes": 3,
+    "scope": "wall-clock-full-operator",
+    "timing": "wall-clock (TileLang Metal 无 GPU 时间戳接口)",
+    "correctness": "FP64 rmsnorm reference; atol=2e-5 rtol=2e-5; NaN-prefilled"
+  },
+  "configurations": [
+    {
+      "id": "tilelang-t256",
+      "threads": 256
+    },
+    {
+      "id": "tilelang-t512",
+      "threads": 512
+    },
+    {
+      "id": "tilelang-t1024",
+      "threads": 1024
+    }
+  ],
+  "execution_order": [
+    {
+      "process": 1,
+      "configs": [
+        "tilelang-t256",
+        "tilelang-t512",
+        "tilelang-t1024"
+      ]
+    },
+    {
+      "process": 2,
+      "configs": [
+        "tilelang-t512",
+        "tilelang-t1024",
+        "tilelang-t256"
+      ]
+    },
+    {
+      "process": 3,
+      "configs": [
+        "tilelang-t1024",
+        "tilelang-t256",
+        "tilelang-t512"
+      ]
+    }
+  ],
+  "updated_at": "2026-11-13T17:11:12.744785+00:00"
+}

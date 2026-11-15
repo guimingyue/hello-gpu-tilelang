@@ -1,0 +1,11 @@
+config_id,implementation,runtime,shape,dtype,threadgroup,block,threads,dispatch,variant,scope,warmup,repeat,seed,run_count,correct,median_ms,median_ms_run_min,median_ms_run_max,effective_bandwidth_gbs,provenance
+tilelang-v0-b256,tilelang-v0,tilelang,16777216,float32,256,1,16777216,threads,b256e1,wall-clock-full-operator,10,50,20260920,3,OK,3.6390624999999996,3.601042,3.6597915,55.32375220266209,measured-tilelang-metal
+tilelang-v0-b512,tilelang-v0,tilelang,16777216,float32,512,1,16777216,threads,b512e1,wall-clock-full-operator,10,50,20260920,3,OK,3.6384369999999997,3.6335205000000004,3.6418125,55.33326315667965,measured-tilelang-metal
+tilelang-v1-e2,tilelang-v1,tilelang,16777216,float32,256,2,8388608,threads,b256e2,wall-clock-full-operator,10,50,20260920,3,OK,3.6855625,3.6806669999999997,3.687062,54.625743560175685,measured-tilelang-metal
+tilelang-v1-e4,tilelang-v1,tilelang,16777216,float32,256,4,4194304,threads,b256e4,wall-clock-full-operator,10,50,20260920,3,OK,3.7900419999999997,3.7810005,3.7912705,53.119884159595074,measured-tilelang-metal
+tilelang-v1-e8,tilelang-v1,tilelang,16777216,float32,256,8,2097152,threads,b256e8,wall-clock-full-operator,10,50,20260920,3,OK,3.7632295,3.7496460000000003,3.7699995,53.49835613267806,measured-tilelang-metal
+mlx-m0,mlx-m0,mlx,16777216,float32,0,0,0,op,builtin,wall-clock-full-operator,10,50,20260920,3,OK,3.71875,3.7054165,3.758312,54.13824322689076,cited-hello-gpu-metal
+mlx-m1-e1,mlx-m1-e1,mlx,16777216,float32,256,1,0,threads,E1,wall-clock-full-operator,10,50,20260920,3,OK,3.676229,3.6548334999999996,3.773,54.764431704336154,cited-hello-gpu-metal
+mlx-m1-e2,mlx-m1-e2,mlx,16777216,float32,256,2,0,threads,E2,wall-clock-full-operator,10,50,20260920,3,OK,3.7291665,3.6749375,3.843312,53.98702149662666,cited-hello-gpu-metal
+mlx-m1-e4,mlx-m1-e4,mlx,16777216,float32,256,4,0,threads,E4,wall-clock-full-operator,10,50,20260920,3,OK,3.92475,3.8250205,4.160271,51.29666653927002,cited-hello-gpu-metal
+mlx-m1-e8,mlx-m1-e8,mlx,16777216,float32,256,8,0,threads,E8,wall-clock-full-operator,10,50,20260920,3,OK,3.795375,3.7872500000000002,4.183521,53.04524375061753,cited-hello-gpu-metal
