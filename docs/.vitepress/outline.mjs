@@ -12,9 +12,17 @@ export const parts = [
     readmeTitle: '第 0 篇：入门',
     landing: '/part0-intro/',
     chapters: [
+      { number: 0, dir: 'chapter0', title: '课程地图：用 TileLang 在 Apple GPU 上学算子优化',
+        summary: '课程结构、两条路线、M1 基线与口径', lead: '地图与约定，不写代码。' },
       { number: 1, dir: 'chapter1', title: '环境准备与第一个 TileLang kernel',
         summary: 'Apple Silicon 安装 TileLang（Metal 后端），跑通逐元素加法',
         lead: '装好环境并跑通第一个 kernel，建立写 kernel→校验→计时最小闭环。' },
+      { number: 2, dir: 'chapter2', title: '执行层次：thread / SIMD-group / threadgroup / grid',
+        summary: 'T.Kernel 与 T.Parallel 对应 Apple GPU 四级层次', lead: '建立「当前线程算哪部分数据」的图景。' },
+      { number: 3, dir: 'chapter3', title: '内存层次：统一内存、threadgroup 内存与寄存器',
+        summary: 'T.alloc_shared / T.alloc_fragment 与分块复用', lead: '数据在哪、搬运代价几何。' },
+      { number: 4, dir: 'chapter4', title: '从 kernel 到实验：校验、计时与受控复测',
+        summary: '正确性先于性能，三进程受控实验与证据归档', lead: '让每个数字有出处、可复跑。' },
     ],
   },
   {
@@ -27,6 +35,10 @@ export const parts = [
       { number: 5, dir: 'chapter5', title: '可信计时：TileLang Metal 的口径',
         summary: '端到端墙钟 vs GPU 时间戳，三进程受控实验',
         lead: 'Metal 后端无 GPU 时间戳，统一墙钟口径与三进程受控实验。' },
+      { number: 6, dir: 'chapter6', title: '剖析：KernelTrace 与 Instruments 的边界',
+        summary: '核对启动规模，明确墙钟口径与硬件计数器边界', lead: '计时回答多久，剖析回答为什么。' },
+      { number: 7, dir: 'chapter7', title: 'Roofline：算术强度与 Apple M1 参考线',
+        summary: '实测 copy/GEMM 参考线，把算子映射为工作点', lead: '定性带宽/算力受限。' },
     ],
   },
   {
@@ -80,6 +92,36 @@ export const parts = [
       },
     ],
   },
+  {
+    prefix: '/part3-agent/',
+    navText: 'Agent',
+    title: '算子优化 Agent',
+    readmeTitle: '第 3 篇：算子优化 Agent',
+    landing: '/part3-agent/',
+    chapters: [
+      { number: 14, dir: 'chapter14', title: 'Agent 入门：模型提修改，工具给证据',
+        summary: '提出候选→校验计时→证据裁决的闭环', lead: '模型不直接碰 GPU，也不自报性能。' },
+      { number: 15, dir: 'chapter15', title: '工具与合同：评测器只认 MSL 与 launch(lib,…)',
+        summary: '候选白名单、隔离运行与权威计时', lead: '能不能跑在计时之前就有可读答案。' },
+      { number: 16, dir: 'chapter16', title: '交互式 Agent：手动循环与在线规划',
+        summary: 'step/call 与 run_online 共享守卫与 truthful 状态', lead: '两种驱动，同一套权威工具。' },
+      { number: 17, dir: 'chapter17', title: '优化报告与独立复测：接受之后还要确认',
+        summary: '配对改进、冻结基线复测、旧复测不可归到当前实现', lead: '接受不等于收益显著。' },
+    ],
+  },
+  {
+    prefix: '/part4-models-agent/',
+    navText: '模型实战',
+    title: '模型实战',
+    readmeTitle: '第 4 篇：模型实战',
+    landing: '/part4-models-agent/',
+    chapters: [
+      { number: 18, dir: 'chapter18', title: '模型实战：Core ML / MLX 跑 YOLO',
+        summary: 'Apple Silicon 部署 YOLO，自定义算子可换 TileLang', lead: '模型层与 kernel DSL 解耦。' },
+      { number: 19, dir: 'chapter19', title: 'LLM 解码：MLX-LM 与量化',
+        summary: '4bit/8bit 量化、逐 token 计时、decode 带宽受限', lead: '把算子方法用到 LLM 解码。' },
+    ],
+  },
 ]
 
 export const chapters = parts.flatMap((part) =>
@@ -93,12 +135,9 @@ export const chapters = parts.flatMap((part) =>
 
 export const appendices = [
   { title: '附录 A · 环境安装细节与常见坑', path: '/appendix/appendix-a-env-install/' },
+  { title: '附录 B · 换一台 Mac：Apple Silicon 代际', path: '/appendix/appendix-b-switch-gpu/' },
+  { title: '附录 C · 低层视角：TileLang 之下的 Metal 提交', path: '/appendix/appendix-c-metal-low-level/' },
   { title: '附录 D · TileLang 与 MLX 的编程范式', path: '/appendix/programming-models/' },
-]
-
-export const crossRef = [
-  { title: '第 3 篇 · 算子优化 Agent（对照）', path: '/part3-agent/' },
-  { title: '第 4 篇 · 模型实战（对照）', path: '/part4-models-agent/' },
 ]
 
 export const navItems = [
@@ -106,6 +145,8 @@ export const navItems = [
   { text: '入门', link: '/part0-intro/', activeMatch: '^/part0-intro/' },
   { text: '计时', link: '/part1-profiling/', activeMatch: '^/part1-profiling/' },
   { text: '算子实战', link: '/part2-kernels/', activeMatch: '^/part2-kernels/' },
+  { text: 'Agent', link: '/part3-agent/', activeMatch: '^/part3-agent/' },
+  { text: '模型实战', link: '/part4-models-agent/', activeMatch: '^/part4-models-agent/' },
   { text: '附录', link: '/appendix/appendix-a-env-install/', activeMatch: '^/appendix/' },
   ...(repoUrl ? [{ text: 'GitHub', link: repoUrl }] : []),
   { text: 'Metal 版（对照）', link: 'https://github.com/datawhalechina/hello-gpu' },
@@ -122,5 +163,4 @@ export const sidebar = [
     })),
   })),
   { text: '附录', collapsed: false, items: appendices.map((a) => ({ text: a.title, link: a.path })) },
-  { text: '对照篇目', collapsed: true, items: crossRef.map((a) => ({ text: a.title, link: a.path })) },
 ]
