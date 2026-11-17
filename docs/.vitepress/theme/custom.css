@@ -9,6 +9,16 @@
   --vp-c-brand-soft: #2456a614;
 }
 
+.dark {
+  --vp-c-brand-1: #8ab4f8;
+  --vp-c-brand-2: #aecbfa;
+  --vp-c-brand-soft: #8ab4f81f;
+}
+
+.vp-doc {
+  overflow-wrap: anywhere;
+}
+
 .figure {
   margin: 24px 0;
   padding: 16px;
@@ -22,6 +32,21 @@
   height: auto;
   margin: 0 auto;
   border-radius: 6px;
+}
+.figure-zoom summary {
+  cursor: pointer;
+  color: var(--vp-c-brand-1);
+}
+.figure-scroll {
+  overflow-x: auto;
+}
+.figure-scroll img {
+  width: 1280px;
+  max-width: none;
+}
+.figure-scroll:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 .figure-caption {
   margin: 12px 0 0;
@@ -43,7 +68,7 @@
   padding: 48px 24px 72px;
 }
 .hg-home h1 {
-  font-size: 40px;
+  font-size: clamp(28px, 5vw, 40px);
   line-height: 1.2;
   letter-spacing: -0.02em;
   border: 0;
@@ -57,7 +82,7 @@
 }
 .hg-home .hg-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 16px;
   margin: 32px 0;
 }

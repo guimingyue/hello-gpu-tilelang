@@ -272,6 +272,15 @@ Instruments 的 Metal System Trace 与 Xcode 的 GPU Capture 能给出逐 dispat
 ::: figure fig-ch8-round-summary
 ![第 8 章逐轮比较：TileLang Metal 与 MLX 对照](./images/round-summary.png)
 
+<details class="figure-zoom">
+<summary>放大图表（可横向滚动）</summary>
+<div class="figure-scroll" tabindex="0" role="region" aria-label="第 8 章逐轮比较放大图，可横向滚动">
+
+![第 8 章逐轮比较放大图](./images/round-summary.svg)
+
+</div>
+</details>
+
 N=16,777,216 · FP32 · 端到端墙钟。柱长为三个独立进程 median 的中位数，误差线为进程范围；TileLang 为本机实测，MLX 行引用 hello-gpu-metal 同口径实验。
 :::
 

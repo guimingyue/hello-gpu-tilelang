@@ -137,7 +137,7 @@ def render_timing_figure(
             ax.text(high + xmax * 0.018, bar.get_y() + bar.get_height() / 2,
                     f"{median:#.3g}", va="center", ha="left", fontsize=14,
                     color=PALETTE["ink"], fontweight="bold")
-        ax.set_yticks(positions, [labels.get(row["implementation"], row["implementation"])
+        ax.set_yticks(positions, [labels.get(row["config_id"], row["implementation"])
                                  for row in panel.rows])
         ax.invert_yaxis()
         ax.set_xlim(0, xmax)

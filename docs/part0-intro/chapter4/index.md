@@ -19,11 +19,14 @@ TileLang Metal 无 GPU 时间戳，用端到端墙钟：
 
 ```python
 def wall(fn, warmup=10, repeat=50):
-    for _ in range(warmup): fn()
+    for _ in range(warmup):
+        fn()
     torch.mps.synchronize()
     out = []
     for _ in range(repeat):
-        t0 = time.perf_counter(); fn(); torch.mps.synchronize()
+        t0 = time.perf_counter()
+        fn()
+        torch.mps.synchronize()
         out.append((time.perf_counter() - t0) * 1e3)
     return out
 ```

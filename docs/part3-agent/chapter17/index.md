@@ -18,7 +18,7 @@ description: "Hello GPU TileLang 第17章 · 配对改进、独立复测冻结�
 
 ## 17.2 独立复测
 
-`final_retest(runs≥3)` 冻结 task/reference/baseline/candidate 到新目录，调 compare.py 跑独立进程。报告带四个 SHA-256；`report()` 校验它们与当前实现一致，否则报「旧复测」拒绝。
+`final_retest(runs≥3)` 冻结 task/reference/baseline/candidate 到新目录，调 `compare.py` 跑独立进程。报告带四个 SHA-256；`report()` 校验它们与当前实现一致，否则报「旧复测」拒绝。
 
 ## 17.3 历史数据纪律
 
@@ -26,6 +26,6 @@ description: "Hello GPU TileLang 第17章 · 配对改进、独立复测冻结�
 
 ## 17.4 练习
 
-1. 跑 final_retest 后改动 best.py，再 report()，观察「旧复测」拒绝；
-2. 解释为什么复测要冻结基线而不是用当前 best；
-3. 用 trajectory 与 retest 报告写一段「接受但收益不显著」的诚实结论。
+1. 跑 `final_retest` 后改动 `best.py`，再 `report()`，观察「旧复测」拒绝；
+2. 解释为什么复测要冻结基线而不是用当前 `best`；
+3. 用 `trajectory` 与 `retest` 报告写一段「接受但收益不显著」的诚实结论。

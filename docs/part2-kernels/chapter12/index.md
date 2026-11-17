@@ -28,7 +28,12 @@ $$
 online 路线维护三个标量/向量状态： running max $m$、running sum $l$、running 加权和 $acc$。每来一个 key：
 
 $$
-m' = \max(m, s_j),\quad corr = e^{m - m'},\quad l' = l \cdot corr + e^{s_j - m'},\quad acc' = acc \cdot corr + e^{s_j - m'} v_j
+\begin{aligned}
+m' &= \max(m, s_j), \\
+corr &= e^{m - m'}, \\
+l' &= l \cdot corr + e^{s_j - m'}, \\
+acc' &= acc \cdot corr + e^{s_j - m'} v_j.
+\end{aligned}
 $$
 
 **重缩放**（乘 $corr$）是在线路线的额外代价：materialized 只需一次 exp/element，online 需要两次 exp + 一次乘 per key。
@@ -54,7 +59,7 @@ O ≈ [0.6225*1 + 0.3775*3, 0.6225*2 + 0.3775*4] = [1.755, 2.755]
 | 语义 | FP32 稳定 softmax 注意力，$1/\sqrt{d}$ 缩放 |
 | 输入 | dyadic（1/64 或 1/32 整数倍）；另加 `rising-max`（scores 单调增，压在线重缩放） |
 | 参考 | FP64 `softmax(QK^T/√d) V` |
-| 容差 | 逐元素 `abs <= 2e-5 + 2e-4·|ref|` |
+| 容差 | 逐元素 `abs <= 2e-5 + 2e-4·\|ref\|` |
 | 边界 | (128,64), (64,64), (256,64), (32,32) × {online, materialized} × {dyadic, rising-max} = 16 用例 |
 | 计时 | 墙钟：预热 10、测量 50；128×64 |
 
@@ -230,6 +235,15 @@ MLX 路线先给框架基线：物化算子组合（`matmul` → `softmax` → `
 
 ::: figure fig-ch12-round-summary
 ![第 12 章逐轮比较：TileLang Metal 与 MLX 对照](./images/round-summary.png)
+
+<details class="figure-zoom">
+<summary>放大图表（可横向滚动）</summary>
+<div class="figure-scroll" tabindex="0" role="region" aria-label="第 12 章逐轮比较放大图，可横向滚动">
+
+![第 12 章逐轮比较放大图](./images/round-summary.svg)
+
+</div>
+</details>
 
 128×64 · FP32 · 端到端墙钟。柱长为三进程 median 的中位数，误差线为进程范围；TileLang 为本机实测，MLX 行引用 hello-gpu-metal 同口径实验。
 :::

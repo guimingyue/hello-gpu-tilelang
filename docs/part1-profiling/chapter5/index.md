@@ -28,14 +28,21 @@ TileLang 与 MLX 同属墙钟口径，可以互比；**不要**与 MSL 的 GPU �
 ## 5.3 计时模板
 
 ```python
-import time, torch
+import time
+
+import torch
+
+
 def wall(fn, warmup=10, repeat=50):
-    for _ in range(warmup): fn()
+    for _ in range(warmup):
+        fn()
     torch.mps.synchronize()
-    samples=[]
+    samples = []
     for _ in range(repeat):
-        t0=time.perf_counter(); fn(); torch.mps.synchronize()
-        samples.append((time.perf_counter()-t0)*1e3)
+        t0 = time.perf_counter()
+        fn()
+        torch.mps.synchronize()
+        samples.append((time.perf_counter() - t0) * 1e3)
     return samples
 ```
 

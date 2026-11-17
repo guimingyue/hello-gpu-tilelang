@@ -142,14 +142,23 @@ export const appendices = [
 
 export const navItems = [
   { text: '首页', link: '/' },
-  { text: '入门', link: '/part0-intro/', activeMatch: '^/part0-intro/' },
-  { text: '计时', link: '/part1-profiling/', activeMatch: '^/part1-profiling/' },
-  { text: '算子实战', link: '/part2-kernels/', activeMatch: '^/part2-kernels/' },
-  { text: 'Agent', link: '/part3-agent/', activeMatch: '^/part3-agent/' },
-  { text: '模型实战', link: '/part4-models-agent/', activeMatch: '^/part4-models-agent/' },
-  { text: '附录', link: '/appendix/appendix-a-env-install/', activeMatch: '^/appendix/' },
-  ...(repoUrl ? [{ text: 'GitHub', link: repoUrl }] : []),
-  { text: 'Metal 版（对照）', link: 'https://github.com/datawhalechina/hello-gpu' },
+  {
+    text: '课程',
+    activeMatch: '^/part',
+    items: parts.map((part) => ({ text: part.readmeTitle, link: part.landing })),
+  },
+  {
+    text: '附录',
+    activeMatch: '^/appendix/',
+    items: appendices.map((appendix) => ({ text: appendix.title, link: appendix.path })),
+  },
+  {
+    text: '参考',
+    items: [
+      ...(repoUrl ? [{ text: 'GitHub', link: repoUrl }] : []),
+      { text: 'Metal 版（对照）', link: metalUrl },
+    ],
+  },
 ]
 
 export const sidebar = [

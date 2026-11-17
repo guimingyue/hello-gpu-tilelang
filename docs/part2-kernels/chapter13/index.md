@@ -49,7 +49,7 @@ Y ≈ [0.36515, 0.73030, 1.09545, 1.46060]
 | 语义 | FP32 `y = x * rsqrt(mean(x^2)+eps) * w`，eps=1e-5 |
 | 输入 | dyadic（1/128 整数倍）；边界另加 `zero`、`zero-weight`、`signed-weight` |
 | 参考 | FP64 同公式 |
-| 容差 | 逐元素 `abs <= 2e-5 + 2e-5·|ref|` |
+| 容差 | 逐元素 `abs <= 2e-5 + 2e-5·\|ref\|` |
 | 边界 | (8,64), (64,256), (256,1024), (64,1025) × T∈{256,1024}(取 min) × 3 输入模式 = 24 用例 |
 | 计时 | 墙钟：预热 10、测量 50；4096×1024 |
 
@@ -230,6 +230,15 @@ T=1024 的 9.07× 恶化需要 capture 分离 serial 合并与占用率。**未�
 
 ::: figure fig-ch13-round-summary
 ![第 13 章逐轮比较：TileLang Metal 与 MLX 对照](./images/round-summary.png)
+
+<details class="figure-zoom">
+<summary>放大图表（可横向滚动）</summary>
+<div class="figure-scroll" tabindex="0" role="region" aria-label="第 13 章逐轮比较放大图，可横向滚动">
+
+![第 13 章逐轮比较放大图](./images/round-summary.svg)
+
+</div>
+</details>
 
 4096×1024 · FP32 · 端到端墙钟。柱长为三进程 median 的中位数，误差线为进程范围；TileLang 为本机实测，MLX 行引用 hello-gpu-metal 同口径实验。
 :::

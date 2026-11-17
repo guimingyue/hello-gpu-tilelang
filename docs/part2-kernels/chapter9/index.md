@@ -50,7 +50,7 @@ P=2、每 threadgroup 2 线程时：partial = [1+2, 3+4] = [3, 7]，final = 3+7 
 | 语义 | FP32 求和，参考为 FP64 `np.sum` |
 | 输入 | `ones` / `weighted` / `random`（1/32 整数倍，精确）与 `uniform`（一般浮点） |
 | 主输入 | `random`，N=1,048,576，seed=20260920 |
-| 容差 | 精确输入：`actual == expected`；uniform：Higham 上界 $\frac{k}{1-k}\sum|X_i|$，$k = 32 \cdot 2^{-24}$ |
+| 容差 | 精确输入：`actual == expected`；uniform：Higham 上界 $\frac{k}{1-k}\sum\lvert X_i\rvert$，$k = 32 \cdot 2^{-24}$ |
 | 边界 | 1, 3, 31, 32, 33, 255, 256, 257, 1027, 4099, 262147 × P∈{128,256,1024} × 2 输入 = 66 用例 |
 | 计时 | 墙钟：预热 5、测量 10；两次 kernel 调用都计入 |
 
@@ -233,6 +233,15 @@ MLX 路线可以用 Metal 的 `simd_sum`（32 lane 硬件归约）+ 两级 simd 
 ::: figure fig-ch9-round-summary
 ![第 9 章逐轮比较：TileLang Metal 与 MLX 对照](./images/round-summary.png)
 
+<details class="figure-zoom">
+<summary>放大图表（可横向滚动）</summary>
+<div class="figure-scroll" tabindex="0" role="region" aria-label="第 9 章逐轮比较放大图，可横向滚动">
+
+![第 9 章逐轮比较放大图](./images/round-summary.svg)
+
+</div>
+</details>
+
 N=1,048,576 · FP32 · 端到端墙钟。柱长为三进程 median 的中位数，误差线为进程范围；TileLang 为本机实测，MLX 行引用 hello-gpu-metal 同口径实验。
 :::
 
@@ -251,7 +260,7 @@ N=1,048,576 · FP32 · 端到端墙钟。柱长为三进程 median 的中位数�
 
 边界覆盖 N=1 → 262,147。N=1 时 stride=P×256 远大于 N，补零后几乎全读 0，仍正确——验证了补零语义。
 
-### 9.6.3 尾部正确性
+### 9.6.4 尾部正确性
 
 N=262,147 非 256 整除：补零到 stride 倍数后尾部贡献 0，与「只加有效元素」等价。66 用例全过。
 

@@ -51,10 +51,14 @@ def vadd(A, B, C):
 ## 1.3 校验与运行
 
 ```python
-import numpy as np, torch
+import numpy as np
+import torch
+
 n = 1 << 20
-a = np.arange(n, dtype=np.float32); b = 2 * a
-ta = torch.from_numpy(a).to("mps"); tb = torch.from_numpy(b).to("mps")
+a = np.arange(n, dtype=np.float32)
+b = 2 * a
+ta = torch.from_numpy(a).to("mps")
+tb = torch.from_numpy(b).to("mps")
 tc = torch.empty(n, dtype=torch.float32, device="mps")
 vadd(ta, tb, tc)
 torch.mps.synchronize()

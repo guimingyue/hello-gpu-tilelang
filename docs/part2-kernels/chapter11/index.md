@@ -57,7 +57,7 @@ C = [[19, 22], [43, 50]]
 | 边界 | (64,64,64), (128,128,128), (256,256,256), (129,131,127) × tile∈{16,64} = 8 用例 |
 | 计时 | 墙钟：预热 10、测量 50；1024×1024×1024 |
 
-Higham 上界是**逐元素**的：不同位置的容差不同（取决于 $|A|@|B|$ 的对应元素），比全局 atol 更紧也更公平。
+Higham 上界是**逐元素**的：不同位置的容差不同（取决于 $\lvert A\rvert @ \lvert B\rvert$ 的对应元素），比全局 atol 更紧也更公平。
 
 ### 11.2.3 非整除形状：主机补零
 
@@ -230,6 +230,15 @@ tile64 的 46 倍 slowdown 需要 capture 看 shared 占用、spill 与指令数
 
 ::: figure fig-ch11-round-summary
 ![第 11 章逐轮比较：TileLang Metal 与 MLX 对照](./images/round-summary.png)
+
+<details class="figure-zoom">
+<summary>放大图表（可横向滚动）</summary>
+<div class="figure-scroll" tabindex="0" role="region" aria-label="第 11 章逐轮比较放大图，可横向滚动">
+
+![第 11 章逐轮比较放大图](./images/round-summary.svg)
+
+</div>
+</details>
 
 1024×1024×1024 · FP32 · 端到端墙钟。柱长为三进程 median 的中位数，误差线为进程范围；TileLang 为本机实测，MLX 行引用 hello-gpu-metal 同口径实验。
 :::

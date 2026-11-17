@@ -6,7 +6,7 @@ title: hello-gpu-tilelang
 description: 用 TileLang（Metal 后端）在 Apple M1 上学 GPU 算子优化：六章受控实验、端到端墙钟、与 hello-gpu-metal 的 MLX 同口径对照。
 ---
 
-<div class="hg-home">
+<div class="hg-home vp-doc">
 
 # hello-gpu-tilelang
 
