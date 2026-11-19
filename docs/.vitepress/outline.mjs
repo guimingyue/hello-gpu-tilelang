@@ -140,8 +140,35 @@ export const appendices = [
   { title: '附录 D · TileLang 与 MLX 的编程范式', path: '/appendix/programming-models/' },
 ]
 
+export const languageLessons = [
+  { slug: '00-history', title: 'TileLang 的来历、目的与用途' },
+  { slug: '01-ecosystem', title: '语言、框架与编译器的关系' },
+  { slug: '02-environment', title: '环境准备：从 Python 到 GPU' },
+  { slug: '03-first-kernel', title: '第一个 kernel：十个数相加' },
+  { slug: '04-tiles', title: 'Tile、索引与尾部保护' },
+  { slug: '05-control-flow', title: '控制流与编译时参数' },
+  { slug: '06-memory', title: '内存、搬运与线程协作' },
+  { slug: '07-reduction', title: '从行求和到稳定 Softmax' },
+  { slug: '08-matmul', title: '从点积到分块矩阵乘' },
+  { slug: '09-fusion', title: '融合：少写一次中间结果' },
+  { slug: '10-performance', title: '正确之后：计时、调参与生成代码' },
+]
+
+const languageSidebar = [
+  { text: '语言入门导读', link: '/language/' },
+  {
+    text: 'TileLang 语言入门',
+    items: languageLessons.map((lesson, number) => ({
+      text: `第 ${number} 课 ${lesson.title}`,
+      link: `/language/${lesson.slug}`,
+    })),
+  },
+  { text: '进入算子实战', link: '/part2-kernels/' },
+]
+
 export const navItems = [
   { text: '首页', link: '/' },
+  { text: '语言入门', link: '/language/', activeMatch: '^/language/' },
   {
     text: '课程',
     activeMatch: '^/part',
@@ -161,7 +188,8 @@ export const navItems = [
   },
 ]
 
-export const sidebar = [
+const courseSidebar = [
+  { text: '先学 TileLang 语言', link: '/language/' },
   ...parts.map((part) => ({
     text: part.readmeTitle,
     link: part.landing,
@@ -173,3 +201,8 @@ export const sidebar = [
   })),
   { text: '附录', collapsed: false, items: appendices.map((a) => ({ text: a.title, link: a.path })) },
 ]
+
+export const sidebar = {
+  '/language/': languageSidebar,
+  '/': courseSidebar,
+}

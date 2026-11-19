@@ -3,7 +3,7 @@ layout: page
 sidebar: false
 aside: false
 title: hello-gpu-tilelang
-description: 用 TileLang（Metal 后端）在 Apple M1 上学 GPU 算子优化：六章受控实验、端到端墙钟、与 hello-gpu-metal 的 MLX 同口径对照。
+description: 从 TileLang 的历史、设计与语言基础出发，通过可运行 demo 学会 GPU 编程，再进入 Apple M1 算子优化实战。
 ---
 
 <div class="hg-home vp-doc">
@@ -20,6 +20,10 @@ Metal Shading Language，在 Apple M1 上实测。本仓库是
 </p>
 
 <div class="hg-cards">
+  <a class="hg-card" href="./language/">
+    <strong>从零认识 TileLang：语言入门</strong>
+    <span>11 课：历史与用途、语言关系、环境、Tile 与执行模型、内存和控制流，再用加法、归约、矩阵乘与融合 demo 逐步实践。</span>
+  </a>
   <a class="hg-card" href="./part2-kernels/">
     <strong>第 2 篇：经典算子与 Kernel 实战</strong>
     <span>第 8–13 章：逐元素、归约、Softmax、矩阵乘、Attention、Fused RMSNorm。每章 8 节、双路线标签页、逐轮比较图。</span>

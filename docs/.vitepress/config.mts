@@ -16,7 +16,7 @@ const configured = new WeakSet<object>()
 export default defineConfig({
   lang: 'zh-CN',
   title: 'hello-gpu-tilelang',
-  description: '用 TileLang（Metal 后端）学 GPU 算子优化：Apple M1 实测墙钟，与 hello-gpu-metal 的 MLX 同口径对照',
+  description: '从语言历史与基础 demo 到 GPU 算子优化：TileLang 语言入门与 Apple Metal 实战',
   base: '/hello-gpu-tilelang/',
   cleanUrls: true,
   appearance: 'dark',

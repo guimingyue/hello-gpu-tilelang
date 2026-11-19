@@ -33,6 +33,8 @@ description: "Hello GPU TileLang 第0章 · 课程结构、两条路线、Apple 
 
 ## 0.4 怎样读
 
+第一次接触 TileLang，可以先读独立的[语言入门教程](../../language/index.md)：从历史、技术关系和十个数的加法开始，用 11 课建立语言基础，再回来读算子优化主线。语言课与原有章节独立编号。
+
 按 `part0 → part1 → part2 → part3/4` 递进；附录 A–D 随时查。每章八节：数据依赖 → 语义正确性 → 成本模型 → 实现双路线 → 正确性基准剖析 → 两路线比较 → 负面结果边界 → 复现练习。
 
 下一步：[第 1 章 环境准备与第一个 TileLang kernel](../chapter1/index.md)。
